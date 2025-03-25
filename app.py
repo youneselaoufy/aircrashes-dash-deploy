@@ -21,7 +21,7 @@ app.title = "Air Crashes Map"
 
 # App layout
 app.layout = html.Div([
-    html.H1("Global Air Crashes (1908–2023)", style={'textAlign': 'center'}),
+    html.H1("Global Air Crashes (1908–2024)", style={'textAlign': 'center'}),
     # KPI Banner
     html.Div(id='kpi-container', style={
         'display': 'flex',
