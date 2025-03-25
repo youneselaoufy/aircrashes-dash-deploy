@@ -5,7 +5,7 @@ import plotly.express as px
 from dash import Dash, dcc, html, Input, Output , dash_table
 
 # Load and prepare data
-df = pd.read_csv("../data/processed/cleaned_aircrashes_with_geo.csv")
+df = pd.read_csv("data/processed/cleaned_aircrashes_with_geo.csv")
 # Combine Year, Month, Day into a proper datetime
 df['Date'] = pd.to_datetime(dict(
     year=df['Year'],
@@ -114,7 +114,7 @@ app.layout = html.Div([
 )
 def update_map(year_range, selected_operators, fatalities_range):
     # Load data
-    df = pd.read_csv("../data/processed/cleaned_aircrashes_with_geo.csv")
+    df = pd.read_csv("data/processed/cleaned_aircrashes_with_geo.csv")
 
     # Map month names to numeric values
     month_map = {
@@ -178,7 +178,7 @@ def update_map(year_range, selected_operators, fatalities_range):
     Input("fatalities-slider", "value")
 )
 def update_kpis(year_range, selected_operators, fatalities_range):
-    df = pd.read_csv("../data/processed/cleaned_aircrashes_with_geo.csv")
+    df = pd.read_csv("data/processed/cleaned_aircrashes_with_geo.csv")
 
     # Month mapping
     month_map = {
@@ -237,7 +237,7 @@ def update_kpis(year_range, selected_operators, fatalities_range):
     Input("fatalities-slider", "value")
 )
 def update_trend_line(year_range, selected_operators, fatalities_range):
-    df = pd.read_csv("../data/processed/cleaned_aircrashes_with_geo.csv")
+    df = pd.read_csv("data/processed/cleaned_aircrashes_with_geo.csv")
 
     # Month name → number
     month_map = {
@@ -284,7 +284,7 @@ def update_trend_line(year_range, selected_operators, fatalities_range):
     Input("fatalities-slider", "value")
 )
 def update_choropleth(year_range, selected_operators, fatalities_range):
-    df = pd.read_csv("../data/processed/cleaned_aircrashes_with_geo.csv")
+    df = pd.read_csv("data/processed/cleaned_aircrashes_with_geo.csv")
 
     # Month mapping
     month_map = {
@@ -340,7 +340,7 @@ def update_choropleth(year_range, selected_operators, fatalities_range):
     Input("fatalities-slider", "value")
 )
 def update_table(year_range, selected_operators, fatalities_range):
-    df = pd.read_csv("../data/processed/cleaned_aircrashes_with_geo.csv")
+    df = pd.read_csv("data/processed/cleaned_aircrashes_with_geo.csv")
 
     month_map = {
         'January': 1, 'February': 2, 'March': 3, 'April': 4,
