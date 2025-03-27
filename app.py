@@ -385,5 +385,4 @@ def update_table(year_range, selected_operators, fatalities_range):
 
 # Run
 if __name__ == '__main__':
-    app.run_server(host='0.0.0.0', port=8050, debug=True)
-
+    app.run_server(host='0.0.0.0', port=8050, debug=False
