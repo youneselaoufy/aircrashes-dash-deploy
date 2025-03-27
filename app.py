@@ -1,4 +1,4 @@
-# webapp/app.py
+# Description: This is the main file that contains the code for the Dash app. It loads the data, creates the layout, and defines the callbacks for the interactive components.
 
 import pandas as pd
 import plotly.express as px
@@ -22,6 +22,13 @@ app.title = "Air Crashes Map"
 # App layout
 app.layout = html.Div([
     html.H1("Global Air Crashes (1908–2024)", style={'textAlign': 'center'}),
+    html.P("Built with love by Younes El Aoufy", style={
+        'textAlign': 'center',
+        'fontStyle': 'italic',
+        'marginTop': '-10px',
+        'color': '#555'
+    }),
+    
     # KPI Banner
     html.Div(id='kpi-container', style={
         'display': 'flex',
@@ -33,6 +40,7 @@ app.layout = html.Div([
         'width': '85%',
         'boxShadow': '0 0 8px rgba(0,0,0,0.1)'
     }),
+
 
     # Filters
     html.Div([
