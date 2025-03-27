@@ -16,7 +16,7 @@ df['Date'] = pd.to_datetime(dict(
 df = df.dropna(subset=['Latitude', 'Longitude', 'Year', 'Fatalities_air'])
 
 # Initialize app
-app = Dash(__name__)
+app = Dash(__name__, requests_pathname_prefix='/aircrashes/')
 app.title = "Air Crashes Map"
 
 # App layout
